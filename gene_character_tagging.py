@@ -1,5 +1,5 @@
 """
-Next Character tagging using CNNs + Bi-directional LSTMs
+Next Character tagging using CNNs + Bi-directional LSTMS
 
 @author: Venkata Sai Sriram Pillutla
 """
@@ -168,10 +168,10 @@ model = Sequential()
 #conv2d layer
 #model.add(Conv2D((10, 1), activation='relu', kernel_initializer='normal', name='rpn_conv1', input_shape=(X_train.shape[1], X_train.shape[2])))
 
-model.add(Conv1D(filters = 64, kernel_size = 3, padding = 'same', activation = 'relu', input_shape = (X_train.shape[1], X_train.shape[2])))
+model.add(Conv1D(filters = 32, kernel_size = 3, padding = 'same', activation = 'relu', input_shape = (X_train.shape[1], X_train.shape[2])))
 model.add(MaxPooling1D(pool_size = 2))
 
-model.add(Conv1D(filters = 32, kernel_size = 3, padding = 'same', activation = 'relu'))
+model.add(Conv1D(filters = 64, kernel_size = 3, padding = 'same', activation = 'relu'))
 model.add(MaxPooling1D(pool_size = 2))
 
 #model.add(Conv1D(filters = 32, kernel_size = 2, padding = 'same', activation = 'relu'))
